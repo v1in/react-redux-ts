@@ -19,11 +19,14 @@ const UserList: React.FC = () => {
     }
 
     return (
-        <div>
-            {users.map((user) => (
-                <div key={user.id}>{user.name}</div>
-            ))}
-        </div>
+        <>
+            <h2><ins>Users:</ins></h2>
+            <blockquote>
+                {users.map((user) => (
+                    <div key={user.id}>{user.name}</div>
+                ))}
+            </blockquote>
+        </>
     );
 };
 
