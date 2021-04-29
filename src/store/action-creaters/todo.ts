@@ -6,7 +6,7 @@ export const fetchTodos = (page = 1, limit = 10) => {
     return async (dispatch: Dispatch<TodoAction>) => {
         try {
             dispatch({ type: TodoActionTypes.FETCH_TODOS });
-            const response = await axios.get('https://jsonplaceholder.typicode.com/todos', {
+            const response = await axios.get(`${process.env.REACT_APP_TODOS_URL}`, {
                 params: { _page: page, _limit: limit }
             });
             dispatch({ type: TodoActionTypes.FETCH_TODOS_SUCCESS, payload: response.data })
