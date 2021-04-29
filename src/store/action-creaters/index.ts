@@ -1,7 +1,9 @@
 import * as UserActionCreators from "./user";
 import * as TodoActionCreators from "./todo";
 
-export default {
+const ActionCreators = {
     ...UserActionCreators,
     ...TodoActionCreators,
-};
+}
+
+export default ActionCreators;
